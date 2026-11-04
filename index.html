@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>Random Number Generator | Sandlada</title>
+    <meta name="description" content="Free random number generator with custom min/max, decimals, presets, history, no-repeat mode, batch draws, and share links. Runs in your browser.">
+    <meta name="application-name" content="Random Number Generator">
+    <meta name="author" content="Sandlada">
+    <meta name="theme-color" content="#3178c6">
+    <link rel="canonical" href="https://random-number-generator.sandlada.com/">
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="/favicon.ico">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Sandlada">
+    <meta property="og:url" content="https://random-number-generator.sandlada.com/">
+    <meta property="og:title" content="Random Number Generator | Sandlada">
+    <meta property="og:description" content="Free random number generator with custom min/max, decimals, presets, history, no-repeat mode, batch draws, and share links. Runs in your browser.">
+    <meta property="og:image" content="https://random-number-generator.sandlada.com/og-cover.svg">
+    <meta property="og:image:type" content="image/svg+xml">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Random Number Generator — ranges, presets, history, and share links">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Random Number Generator | Sandlada">
+    <meta name="twitter:description" content="Free random number generator with custom min/max, decimals, presets, history, no-repeat mode, batch draws, and share links. Runs in your browser.">
+    <meta name="twitter:image" content="https://random-number-generator.sandlada.com/og-cover.svg">
+    <meta name="twitter:image:alt" content="Random Number Generator — ranges, presets, history, and share links">
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Random Number Generator",
+        "url": "https://random-number-generator.sandlada.com/",
+        "description": "Generate random numbers with configurable ranges, presets, history, no-repeat unique draws, batch generation, and shareable links.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Sandlada"
+        },
+        "image": "https://random-number-generator.sandlada.com/og-cover.svg"
+      }
+    </script>
+
+    <!-- Copied From SHARED Module -->
+    <script>
+        if(!document.themeConfig) {
+            document.themeConfig = {}
+        }
+        document.themeConfig.isDark = JSON.parse(localStorage.getItem('theme-config-is-dark') ?? 'false')
+        
+        document.addEventListener('ui-change-to-light-theme', () => {
+            if(document.documentElement.hasAttribute('dark')) {
+                document.documentElement.removeAttribute('dark')
+            }
+            if(document.themeConfig.isDark) {
+                document.themeConfig.isDark = false
+            }
+        })
+        document.addEventListener('ui-change-to-dark-theme', () => {
+            if(!document.themeConfig.isDark) {
+                document.themeConfig.isDark = true
+            }
+            if(document.documentElement.hasAttribute('dark')) {
+                return
+            }
+            document.documentElement.setAttribute('dark', '')
+        })
+        document.addEventListener('ui-save-changes', () => {
+            localStorage.setItem('theme-config-is-dark', JSON.stringify(document.themeConfig.isDark))
+        })
+
+        // Init
+        document.dispatchEvent(new Event(document.themeConfig.isDark ? 'ui-change-to-dark-theme' : 'ui-change-to-light-theme'))
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

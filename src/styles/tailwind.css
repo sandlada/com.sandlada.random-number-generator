@@ -1,0 +1,18 @@
+@layer theme, base, components, utilities;
+
+@import "tailwindcss";
+
+/* App layout uses px + breakpoints; keep Tailwind spacing scale in px (not rem). */
+@theme {
+    --spacing: 1px;
+}
+@import "@sandlada/material-design-css/preset.css";
+@import "./fluent-theme.css";
+@import "@sandlada/material-design-css/motion/tw.css";
+@import "@sandlada/material-design-css/color/tw.css";
+@import "@sandlada/material-design-css/palette/tw.css";
+@import "@sandlada/material-design-css/shape/tw.css";
+@import "@sandlada/material-design-css/space/tw.css";
+@import "@sandlada/material-design-css/typography/tw.css";
+@import "@sandlada/material-design-css/typography/variables.css";
+@import "@sandlada/material-design-css/typography/utilities.css";

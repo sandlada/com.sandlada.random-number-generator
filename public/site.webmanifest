@@ -1,0 +1,17 @@
+{
+  "name": "Random Number Generator",
+  "short_name": "RNG",
+  "description": "Generate random numbers with custom ranges, presets, history, and share links.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f5f5",
+  "theme_color": "#3178c6",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
+    }
+  ]
+}

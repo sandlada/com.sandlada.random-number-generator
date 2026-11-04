@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="og-title og-desc">
+  <title id="og-title">Random Number Generator | Sandlada</title>
+  <desc id="og-desc">Generate random numbers with presets, history, and share links.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#e8f0fe"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4da3ff"/>
+      <stop offset="100%" stop-color="#3178c6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="48" y="48" width="1104" height="534" rx="24" fill="#fff" stroke="#d4d4d4" stroke-width="2"/>
+  <rect x="96" y="96" width="72" height="72" rx="16" fill="url(#accent)"/>
+  <rect x="108" y="108" width="48" height="48" rx="8" fill="#fff"/>
+  <circle cx="120" cy="120" r="4" fill="#3178c6"/>
+  <circle cx="144" cy="120" r="4" fill="#3178c6"/>
+  <circle cx="132" cy="132" r="4" fill="#3178c6"/>
+  <circle cx="120" cy="144" r="4" fill="#3178c6"/>
+  <circle cx="144" cy="144" r="4" fill="#3178c6"/>
+  <text x="200" y="148" font-family="Segoe UI, system-ui, sans-serif" font-size="28" font-weight="600" fill="#757575">Sandlada</text>
+  <text x="96" y="280" font-family="Segoe UI, system-ui, sans-serif" font-size="56" font-weight="600" fill="#1e1e1e">Random Number Generator</text>
+  <text x="96" y="340" font-family="Segoe UI, system-ui, sans-serif" font-size="28" fill="#616161">Ranges, presets, history, share links</text>
+  <text x="96" y="480" font-family="Cascadia Code, Consolas, ui-monospace, monospace" font-size="120" font-weight="600" fill="#3178c6">42</text>
+  <text x="96" y="560" font-family="Segoe UI, system-ui, sans-serif" font-size="22" fill="#757575">random-number-generator.sandlada.com</text>
+</svg>

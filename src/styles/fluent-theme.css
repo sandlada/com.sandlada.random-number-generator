@@ -1,0 +1,194 @@
+/**
+ * Microsoft Fluent + TypeScript-docs inspired tokens.
+ * Maps onto existing --md-sys-color-* usages in components.
+ */
+
+:root {
+    --app-font: "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", system-ui,
+        sans-serif;
+    --app-font-mono: "Cascadia Code", "Consolas", "SF Mono", ui-monospace, monospace;
+
+    --app-accent: #3178c6;
+    --app-accent-hover: #235a97;
+    --app-accent-foreground: #ffffff;
+    --app-subtle-hover-bg: #ebf2ff;
+    --app-subtle-hover-fg: #3b71ca;
+
+    --app-bg: #f5f5f5;
+    --app-bg-subtle: #ebebeb;
+    --app-surface: #ffffff;
+    --app-surface-elevated: #ffffff;
+    --app-border: #d4d4d4;
+    --app-border-strong: #c8c8c8;
+
+    --app-text: #1e1e1e;
+    --app-text-secondary: #616161;
+    --app-text-muted: #757575;
+
+    --app-danger: #c42b1c;
+    --app-danger-foreground: #ffffff;
+
+    --app-radius: 4px;
+    --app-radius-lg: 8px;
+
+    --md-sys-color-primary: var(--app-accent);
+    --md-sys-color-on-primary: var(--app-accent-foreground);
+    --md-sys-color-surface: var(--app-surface);
+    --md-sys-color-on-surface: var(--app-text);
+    --md-sys-color-on-surface-variant: var(--app-text-secondary);
+    --md-sys-color-outline: var(--app-border-strong);
+    --md-sys-color-outline-variant: var(--app-border);
+    --md-sys-color-surface-container-high: var(--app-surface-elevated);
+    --md-sys-color-secondary-container: #e8f0fe;
+    --md-sys-color-on-secondary-container: #1e1e1e;
+    --md-sys-color-secondary: #deecf9;
+    --md-sys-color-on-secondary: #1e1e1e;
+    --md-sys-color-tertiary-container: #eef4fc;
+    --md-sys-color-on-tertiary-container: #1e1e1e;
+    --md-sys-color-error: var(--app-danger);
+    --md-sys-color-on-error: var(--app-danger-foreground);
+}
+
+:root[dark] {
+    --app-accent: #4da3ff;
+    --app-accent-hover: #6eb5ff;
+    --app-accent-foreground: #0d1117;
+    --app-subtle-hover-bg: #2a3f5f;
+    --app-subtle-hover-fg: #6eb5ff;
+
+    --app-bg: #1e1e1e;
+    --app-bg-subtle: #252526;
+    --app-surface: #252526;
+    --app-surface-elevated: #2d2d30;
+    --app-border: #3e3e42;
+    --app-border-strong: #505050;
+
+    --app-text: #e4e4e4;
+    --app-text-secondary: #b4b4b4;
+    --app-text-muted: #9d9d9d;
+
+    --app-danger: #f1707b;
+    --app-danger-foreground: #1e1e1e;
+
+    --md-sys-color-secondary-container: #2a3f5f;
+    --md-sys-color-on-secondary-container: #e4e4e4;
+    --md-sys-color-secondary: #3a3f4a;
+    --md-sys-color-on-secondary: #e4e4e4;
+    --md-sys-color-tertiary-container: #2d333b;
+    --md-sys-color-on-tertiary-container: #e4e4e4;
+}
+
+@layer base {
+    html {
+        font-family: var(--app-font);
+        -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+        margin: 0;
+        background: var(--app-bg);
+        color: var(--app-text);
+    }
+
+    #app {
+        min-height: 100dvh;
+        padding-left: env(safe-area-inset-left, 0px);
+        padding-right: env(safe-area-inset-right, 0px);
+        background: var(--app-bg);
+        color: var(--app-text);
+    }
+}
+
+@layer components {
+    /* Native <dialog> (showModal): margin auto centers in the viewport top layer. */
+    .app-modal,
+    .app-panel-dialog {
+        margin: auto;
+    }
+
+    .fluent-card {
+        background: var(--app-surface);
+        border: 1px solid var(--app-border);
+        border-radius: var(--app-radius-lg);
+        padding: 16px 20px;
+    }
+
+    .fluent-card-title {
+        margin: 0 0 12px;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: var(--app-text-secondary);
+    }
+
+    .fluent-field {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .fluent-field-label {
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--app-text-secondary);
+    }
+
+    .fluent-input {
+        height: 32px;
+        padding: 0 10px;
+        border: 1px solid var(--app-border);
+        border-radius: var(--app-radius);
+        background: var(--app-surface);
+        color: var(--app-text);
+        font-family: inherit;
+        font-size: 14px;
+    }
+
+    .fluent-input:focus {
+        outline: 2px solid var(--app-accent);
+        outline-offset: 0;
+        border-color: var(--app-accent);
+    }
+
+    .fluent-details {
+        border: 1px solid var(--app-border);
+        border-radius: var(--app-radius-lg);
+        background: var(--app-surface);
+        padding: 0 20px;
+        margin: 0;
+    }
+
+    .fluent-details > summary {
+        cursor: pointer;
+        padding: 12px 0;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--app-accent);
+        list-style: none;
+    }
+
+    .fluent-details > summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .fluent-details[open] > summary {
+        border-bottom: 1px solid var(--app-border);
+        margin-bottom: 12px;
+    }
+
+    @media (max-width: 639px) {
+        .fluent-input {
+            min-height: 44px;
+            height: auto;
+            padding: 10px 12px;
+            font-size: 16px;
+        }
+
+        .fluent-details > summary {
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
