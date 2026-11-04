@@ -69,7 +69,7 @@ pnpm dev
 
 CI runs `pnpm test` and `pnpm build` on push/PR (see `.github/workflows/ci.yml`).
 
-**pnpm 12:** `pnpm-workspace.yaml` lists `allowBuilds.esbuild: true` so Cloudflare/CI can run esbuild’s install script (avoids `ERR_PNPM_IGNORED_BUILDS`).
+**pnpm 12:** `pnpm-workspace.yaml` `allowBuilds` allows install scripts for `esbuild` (Vite) and `workerd` / `wrangler` (Cloudflare Pages), avoiding `ERR_PNPM_IGNORED_BUILDS`.
 
 ## SEO & production URL
 
